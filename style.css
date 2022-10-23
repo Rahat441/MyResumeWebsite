@@ -47,12 +47,83 @@
 
 /* FOR INDEX  */
 
+/* FOR INDEX CHANGING TEXT  */
+
+.wrapper{
+    display: flex;
+    position: relative;
+    left: 900;
+    top: 300;
+  }
+  .wrapper .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+  }
+  .wrapper .dynamic-txts{
+    margin-left: -3px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+  }
+  .dynamic-txts li{
+    opacity: .8;
+    list-style: none;
+    color: #FC6D6D;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+  }
+  @keyframes slide {
+    100%{
+      top: -360px;
+    }
+  }
+  .dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+  }
+  .dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #343F4F;
+    border-left: 2px solid #FC6D6D;
+    animation: typing 3s steps(10) infinite;
+  }
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+/* FOR INDEX CHANGING TEXT  */
+.Footer{
+    
+    margin: 2%;
+    justify-content: center;
+    padding-left: 5%; padding-right:  5%;
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+    top: 750; left: 50;
+    opacity: .9;
+    height: 100%;
+    width: 100%;
+}
 .body-text{
    
     position: relative;
-    top: 250; left:80;
+    top: 125; left:80;
     height: 50%; width: 50%;
-    opacity: .5;
+    opacity: .8;
    
 
 }
